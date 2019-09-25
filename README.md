@@ -28,46 +28,46 @@ The below are the methods that must be present on your models. Feel free to buil
 
 #### Build the following methods on the `Author` class
 
-An author is initialized with a name as a string. A name **cannot** be changed after it is initialized.
+<!-- An author is initialized with a name as a string. A name **cannot** be changed after it is initialized. -->
 
-+ `Author#name`
-  + Returns the name of the author as a string
-+ `Author.all`
-  + Returns an array of all Author instances
-+ `Author.most_verbose`
-  + Returns the Author instance who has the longest article by word count
+<!-- + `Author#name`
+  + Returns the name of the author as a string -->
+<!-- + `Author.all`
+  + Returns an array of all Author instances -->
+<!-- + `Author.most_verbose`
+  + Returns the Author instance who has the longest article by word count -->
 
 ---
 
 #### Build the following methods on the `Article` class
 
-An article is initialized with an author as an Author object, a magazine as a Magazine object, title as a string, and content as a string. An article **cannot** change its author or magazine after it is has been initialized.
-
+<!-- An article is initialized with an author as an Author object, a magazine as a Magazine object, title as a string, and content as a string. An article **cannot** change its author or magazine after it is has been initialized. -->
+<!-- 
 + `Article.all`
-  + Returns an array of all Article instances
-+ `Article#author`
-  + Returns the author for that given article
-+ `Article#magazine`
-  + Returns the magazine for that given article
-+ `Article#title`
+  + Returns an array of all Article instances -->
+<!-- + `Article#author`
+  + Returns the author for that given article -->
+<!-- + `Article#magazine`
+  + Returns the magazine for that given article -->
+<!-- + `Article#title`
   + Returns the title for that given article
 + `Article#content`
-  + Returns the content for that given article
+  + Returns the content for that given article -->
 
 ---
 
 #### Build the following methods on the `Magazine` class
 
-A magazine is initialized with a name as a string and a category as a string. The name of the magazine and the category of the magazine **can be** changed after being initialized.
+<!-- A magazine is initialized with a name as a string and a category as a string. The name of the magazine and the category of the magazine **can be** changed after being initialized. -->
 
-+ `Magazine#name`
+<!-- + `Magazine#name`
   + Returns the name of this magazine
 + `Magazine#category`
   + Returns the category of this magazine
 + `Magazine.all`
-  + Returns an array of all Magazine instances
-+ `Magazine.find_by_name(name)`
-  + Given a string of magazine's name, this method returns the first magazine object that matches
+  + Returns an array of all Magazine instances -->
+<!-- + `Magazine.find_by_name(name)`
+  + Given a string of magazine's name, this method returns the first magazine object that matches -->
 
 ---
 
@@ -75,22 +75,22 @@ A magazine is initialized with a name as a string and a category as a string. Th
 
 #### `Author`
 
-+ `Author#add_article(magazine, title, content)`
-  + Given a magazine (as Magazine instance), a title (as a string), and content (as a string), this method creates a new Article instance and associates it with that author and that magazine.
-+ `Author#articles`
-  + Returns an array of Article instances the author has written
-+ `Author#magazines`
-  + Returns a **unique** array of Magazine instances for which the author has contributed to
-+ `Author#show_specialties`
-  + Returns a **unique** array of categories of the magazines for which the author has contributed to
-+ `Author.most_active`
-  + Returns the Author instance who has written the greatest number of articles
+<!-- + `Author#add_article(magazine, title, content)`
+  + Given a magazine (as Magazine instance), a title (as a string), and content (as a string), this method creates a new Article instance and associates it with that author and that magazine. -->
+<!-- + `Author#articles`
+  + Returns an array of Article instances the author has written -->
+<!-- + `Author#magazines`
+  + Returns a **unique** array of Magazine instances for which the author has contributed to -->
+<!-- + `Author#show_specialties`
+  + Returns a **unique** array of categories of the magazines for which the author has contributed to -->
+<!-- + `Author.most_active`
+  + Returns the Author instance who has written the greatest number of articles -->
 
 #### `Magazine`
 
-+ `Magazine#article_titles`
-  + Returns an array of the titles of all articles written for that magazine
-+ `Magazine#contributors`
-  + Returns an array of Author instances who have written for this magazine
-+ `Magazine#word_count`
-  + Returns a number that is the total number of words for all of the articles in this magazine
+<!-- + `Magazine#article_titles`
+  + Returns an array of the titles of all articles written for that magazine -->
+<!-- + `Magazine#contributors`
+  + Returns an array of Author instances who have written for this magazine -->
+<!-- + `Magazine#word_count`
+  + Returns a number that is the total number of words for all of the articles in this magazine -->
