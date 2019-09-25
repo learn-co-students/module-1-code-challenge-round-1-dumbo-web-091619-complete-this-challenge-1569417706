@@ -30,4 +30,29 @@ class Magazine
     end
   end
 
+  ## ADDITIONAL METHODS
+
+
+# + `Magazine#article_titles`
+# + Returns an array of the titles of all articles written for that magazine
+# + `Magazine#contributors`
+# + Returns an array of Author instances who have written for this magazine
+# + `Magazine#word_count`
+# + Returns a number that is the total number of words for all of the articles in this magazine
+
+  def article_titles
+  # + Returns an array of the titles of all articles written for that magazine
+
+  end
+
+  def contributors
+  # + Returns an array of Author instances who have written for this magazine
+
+  end
+
+  def word_count
+  # + Returns a number that is the total number of words for all of the articles in this magazine
+
+  end
+
 end
