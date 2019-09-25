@@ -33,7 +33,7 @@ class Magazine
   def word_count
     article_count = 0
     articles.each do |article|
-      article_count += article.content.count
+      article_count += article.split(" ").length
     end
     article_count
   end
