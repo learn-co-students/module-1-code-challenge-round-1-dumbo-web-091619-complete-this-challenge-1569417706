@@ -18,14 +18,16 @@ class Magazine
     @@all << self
   end
 
-  def self.all
+  def self.all # WORKS
   #   + Returns an array of all Magazine instances
     @@all
   end
 
-  def self.find_by_name(name)
+  def self.find_by_name(name) # WORKS
   #   + Given a string of magazine's name, this method returns the first magazine object that matches
-
+    self.all.find do |magazine|
+      magazine.name == name
+    end
   end
 
 end

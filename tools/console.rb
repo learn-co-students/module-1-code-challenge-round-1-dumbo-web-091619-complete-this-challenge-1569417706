@@ -37,6 +37,21 @@ puts Author.all.length == 4
 puts "Article.all works?"
 puts Article.all.length == 5
 
+## git commit here
+
+puts "Magazine.find_by_name works?"
+puts Magazine.find_by_name("Top Gear") == top_gear
+
+puts "author#articles (helper method) works?"
+puts janet.articles.length == 2
+
+puts "author#longest_article (helper method) works?"
+puts janet.longest_article == janet_fly_fishing_quarterly
+
+puts "Author.most_verbose works?"
+puts Author.most_verbose == janet
+
+## git commit here
 
 
 
