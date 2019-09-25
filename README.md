@@ -34,8 +34,8 @@ An author is initialized with a name as a string. A name **cannot** be changed a
   + Returns the name of the author as a string -->
 <!-- + `Author.all`
   + Returns an array of all Author instances -->
-+ `Author.most_verbose`
-  + Returns the Author instance who has the longest article by word count
+<!-- + `Author.most_verbose`
+  + Returns the Author instance who has the longest article by word count -->
 
 ---
 
@@ -66,8 +66,8 @@ A magazine is initialized with a name as a string and a category as a string. Th
   + Returns the category of this magazine
 + `Magazine.all`
   + Returns an array of all Magazine instances -->
-+ `Magazine.find_by_name(name)`
-  + Given a string of magazine's name, this method returns the first magazine object that matches
+<!-- + `Magazine.find_by_name(name)`
+  + Given a string of magazine's name, this method returns the first magazine object that matches -->
 
 ---
 
@@ -83,8 +83,8 @@ A magazine is initialized with a name as a string and a category as a string. Th
   + Returns a **unique** array of Magazine instances for which the author has contributed to -->
 <!-- + `Author#show_specialties`
   + Returns a **unique** array of categories of the magazines for which the author has contributed to -->
-+ `Author.most_active`
-  + Returns the Author instance who has written the greatest number of articles
+<!-- + `Author.most_active`
+  + Returns the Author instance who has written the greatest number of articles -->
 
 #### `Magazine`
 

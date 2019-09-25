@@ -38,4 +38,35 @@ class Author
     categories.uniq
   end
 
+  def content
+    content = articles.map do |article|
+      article.content
+    end
+  end
+
+  def words
+    content.map do |content_instance|
+      content_instance.split(" ").size
+    end
+  end
+
+  def word_count
+    words.reduce(0) do |sum, word|
+     sum + word
+    end
+  end
+
+  def self.most_verbose
+    self.all.max_by do |author|
+      author.word_count
+    end
+  end
+
+  def self.most_active
+    self.all.max_by do |author|
+      author.articles.size
+    end
+    
+  end
+
 end

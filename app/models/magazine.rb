@@ -50,5 +50,11 @@ class Magazine
     end
   end
 
+  def self.find_by_name(name_to_find)
+    self.all.find do |magazine|
+      magazine.name == name_to_find
+    end
+  end
+
 
 end
