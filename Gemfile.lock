@@ -12,10 +12,11 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   pry
   require_all
 
 BUNDLED WITH
-   1.16.1
+   1.17.2
