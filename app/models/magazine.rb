@@ -40,19 +40,32 @@ class Magazine
 # + `Magazine#word_count`
 # + Returns a number that is the total number of words for all of the articles in this magazine
 
-  def article_titles
+  # helper method :)
+  def articles # WORKS
+    Article.all.select do |article|
+      article.magazine == self
+    end
+  end
+
+  def article_titles # WORKS
   # + Returns an array of the titles of all articles written for that magazine
-
+    self.articles.map do |article|
+      article.title
+    end
   end
 
-  def contributors
+  def contributors # WORKS
   # + Returns an array of Author instances who have written for this magazine
-
+    self.articles.map do |article|
+      article.author
+    end
   end
 
-  def word_count
+  def word_count # WORKS
   # + Returns a number that is the total number of words for all of the articles in this magazine
-
+    self.articles.reduce(0) do |sum, article|
+      sum + article.content.split.length
+    end
   end
 
 end

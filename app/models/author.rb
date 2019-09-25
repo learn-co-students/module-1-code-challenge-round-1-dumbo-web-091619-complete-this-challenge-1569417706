@@ -56,9 +56,9 @@ class Author
 # + `Author.most_active`
 # + Returns the Author instance who has written the greatest number of articles
 
-  def add_article(magazine, title, content)
+  def add_article(magazine, title, content) # WORKS
   # + Given a magazine (as Magazine instance), a title (as a string), and content (as a string), this method creates a new Article instance and associates it with that author and that magazine.
-
+    Article.new(self, magazine, title, content)
   end
 
   # def articles
@@ -66,19 +66,26 @@ class Author
   #   see line 25
   # end
 
-  def magazines ## UNIQUE!
+  def magazines ## UNIQUE! # WORKS
   # + Returns a **unique** array of Magazine instances for which the author has contributed to
-
+    all_my_magazines = self.articles.map do |article|
+      article.magazine
+    end
+    all_my_magazines.uniq
   end
 
-  def show_specialties ## UNIQUE!
+  def show_specialties ## UNIQUE! # WORKS
   # + Returns a **unique** array of categories of the magazines for which the author has contributed to
-
+    self.magazines.map do |magazine|
+      magazine.category
+    end
   end
 
   def self.most_active
   # + Returns the Author instance who has written the greatest number of articles
-
+    self.all.max_by do |author|
+      author.articles.length
+    end
   end
 
 end

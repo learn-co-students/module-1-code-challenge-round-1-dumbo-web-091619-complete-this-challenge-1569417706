@@ -53,9 +53,36 @@ puts Author.most_verbose == janet
 
 ## git commit here
 
+## Associations and Aggregate Methods
 
+puts "magazine#articles (helper method) works?"
+puts fly_fishing_quarterly.articles.length == 2
 
+puts "article#article_titles works?"
+puts fly_fishing_quarterly.article_titles == ["My Week in the Adirondacks", "You can fit lots of fishing gear in a Honda CRV"]
 
+puts "article#contributors works?"
+puts top_gear.contributors == [janet, jim]
+
+puts "article.word_count works?"
+puts "tested against wordcounter.net word count of the content strings"
+puts top_gear.word_count == 10
+
+puts "author#add_article works?"
+howard_cosmo = howard.add_article(cosmo, "My Top 5 Fly-Fishing Hats", "1: baseball cap, 2: sun hat, 3: cowboy hat, 4: hiking hat, 5: no hat at all")
+puts cosmo.articles.length == 2
+
+puts "author#magazines works?"
+howard_fly_fishing_quarterly_2 = howard.add_article(fly_fishing_quarterly, "My Weekend Upstate", "Even more mosquitoes than the Adirondacks, and I caught no fish. 1 star.")
+puts howard.magazines.length == 2
+puts howard.magazines
+
+puts "author#show_specialties works?"
+howard.show_specialties.length == 2
+puts howard.show_specialties
+
+puts "Author.most_active works?"
+puts Author.most_active == howard
 ### DO NOT REMOVE THIS
 binding.pry
 
